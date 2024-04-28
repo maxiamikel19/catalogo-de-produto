@@ -14,3 +14,22 @@ $grey: #1C1C1C;
 
 $ff-1: "Roboto", sans-serif;
 $ff-2: "Open Sans", sans-serif;
+
+//Responsive size
+
+$small: 600px;
+$medium: 960px;
+$large: 1264px;
+$extra-large: 1904px;
+
+@mixin maxsize($size){
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin minsize($size){
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
